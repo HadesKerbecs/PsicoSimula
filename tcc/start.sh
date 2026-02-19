@@ -1,0 +1,1 @@
+gunicorn psicosimula.wsgi:application
