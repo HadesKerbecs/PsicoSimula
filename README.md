@@ -1,119 +1,264 @@
-🧠 PsicoSimula — Ferramenta Web para Ensino de Psicopatologia com IAG
+# 🧠 PsicoSimula
 
-O PsicoSimula é uma ferramenta web educacional desenvolvida como Trabalho de Conclusão de Curso (TCC) em Engenharia de Software, com o objetivo de auxiliar o ensino e o estudo da psicopatologia por meio da Inteligência Artificial Generativa (IAG).
-A plataforma permite a geração de casos clínicos hipotéticos personalizados, proporcionando uma experiência de aprendizado interativa, dinâmica e adaptável para estudantes e profissionais da área da saúde mental.
+Plataforma web educacional desenvolvida como Trabalho de Conclusão de Curso (TCC) em Engenharia de Software, utilizando Inteligência Artificial Generativa para criação de casos clínicos hipotéticos voltados ao ensino da psicopatologia.
 
-🎓 Contexto Acadêmico
+O sistema permite que estudantes e profissionais da área da saúde mental gerem cenários clínicos personalizados através de parâmetros configuráveis, proporcionando uma experiência de aprendizagem interativa, dinâmica e adaptável.
 
-* Projeto: Trabalho de Conclusão de Curso (TCC)
-* Curso: Engenharia de Software
-* Autor: Eduardo Tristão Melo
-* Tema: Ferramenta web para geração e apresentação de casos clínicos hipotéticos em psicopatologia utilizando Inteligência Artificial Generativa
+---
 
-✨ Funcionalidades
+## 🎯 Problema Resolvido
 
-* Geração automática de casos clínicos hipotéticos com apoio de IA
-* Personalização de parâmetros clínicos:
-  * Idade
-  * Histórico médico
-  * Contexto social
-  * Complexidade do caso
-* Interface web responsiva e interativa
-* Feedback automatizado para apoio ao raciocínio clínico
-* Armazenamento do histórico de interações do usuário
-* Ambiente voltado ao aprendizado prático e simulado, sem uso de dados reais
+O estudo da psicopatologia frequentemente depende de livros, exemplos estáticos e discussões teóricas.
 
-🧱 Tecnologias Utilizadas
-Frontend
+O PsicoSimula foi desenvolvido para permitir a geração dinâmica de casos clínicos simulados, possibilitando que cada usuário explore diferentes cenários e níveis de complexidade sem depender de casos previamente cadastrados.
+
+A solução utiliza Inteligência Artificial Generativa para criar situações clínicas inéditas, promovendo maior engajamento e estímulo ao raciocínio clínico.
+
+---
+
+## 🚀 Principais Funcionalidades
+
+### 🤖 Geração de Casos Clínicos com IA
+
+* Integração com OpenAI API
+* Criação dinâmica de casos clínicos hipotéticos
+* Geração contextualizada de conteúdo
+* Respostas personalizadas em tempo real
+
+### ⚙️ Personalização dos Cenários
+
+O usuário pode configurar parâmetros como:
+
+* Idade
+* Histórico médico
+* Contexto social
+* Complexidade do caso
+* Características clínicas específicas
+
+### 💬 Interação Dinâmica
+
+* Interface conversacional
+* Fluxo contínuo de interação
+* Geração de conteúdo em tempo real
+* Experiência semelhante a um ambiente de simulação
+
+### 🗃️ Histórico de Interações
+
+* Armazenamento das conversas realizadas
+* Persistência de dados
+* Consulta de simulações anteriores
+
+### 📱 Interface Responsiva
+
+* Compatível com desktop e dispositivos móveis
+* Navegação simplificada
+* Experiência focada em usabilidade
+
+---
+
+## 🧠 Desafios Técnicos Resolvidos
+
+Durante o desenvolvimento foram implementadas soluções para:
+
+* Integração entre Django e OpenAI API
+* Construção de prompts para geração consistente dos casos clínicos
+* Persistência do histórico das interações
+* Gerenciamento de sessões de usuários
+* Atualização dinâmica da interface durante a geração das respostas
+* Tratamento de respostas provenientes da IA
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### Backend
+
+* Python
+* Django
+
+### Frontend
+
 * HTML5
 * CSS3
 * JavaScript
 
-Backend
-* Python
-* Django
+### Banco de Dados
 
-Banco de Dados
-* SQLite (armazenamento do histórico de interações)
+* SQLite
 
-Inteligência Artificial
+### Inteligência Artificial
+
 * OpenAI API (ChatGPT)
 
-📂 Estrutura do Projeto
+### Ferramentas
+
+* Git
+* GitHub
+
+---
+
+## 🏗️ Arquitetura da Solução
+
+```text
+Usuário
+   │
+   ▼
+Frontend (HTML, CSS, JS)
+   │
+   ▼
+Backend Django
+   │
+   ▼
+OpenAI API
+   │
+   ▼
+Geração do Caso Clínico
+```
+
+---
+
+## 📷 Demonstração
+
+### Tela Inicial
+
+*(Inserir screenshot)*
+
+### Configuração do Caso Clínico
+
+*(Inserir screenshot)*
+
+### Caso Clínico Gerado
+
+*(Inserir screenshot)*
+
+### Histórico de Conversas
+
+*(Inserir screenshot)*
+
+---
+
+## 📚 Estrutura do Projeto
+
+```text
 PsicoSimula/
-├── ferramentaweb/        # Aplicação principal Django
-│   ├── templates/        # Templates HTML
-│   ├── static/           # Arquivos estáticos (CSS, JS, imagens)
+├── ferramentaweb/
+│   ├── templates/
+│   ├── static/
 │   ├── views.py
 │   ├── models.py
 │   └── urls.py
-├── tcc/                  # Configurações do projeto Django
+│
+├── tcc/
 ├── db.sqlite3
 └── manage.py
+```
 
-🚀 Como Rodar o Projeto Localmente
-🔹 Pré-requisitos
+---
 
-Antes de iniciar, certifique-se de ter instalado:
+## 🚀 Executando Localmente
 
-* Python 3.10 ou superior
+### Pré-requisitos
+
+* Python 3.10+
 * pip
-* Conta na OpenAI (para geração da chave da API)
+* Chave da OpenAI API
 
-🔹 Clonar o repositório
+### Clonar o projeto
+
+```bash
 git clone https://github.com/HadesKerbecs/PsicoSimula.git
 cd PsicoSimula
+```
 
-🔹 Criar ambiente virtual (opcional, mas recomendado)
+### Criar ambiente virtual
+
+```bash
 python -m venv venv
+```
 
+### Ativar ambiente virtual
 
-Ativar o ambiente virtual:
+Windows:
 
-Windows
+```bash
 venv\Scripts\activate
+```
 
-Linux / macOS
+Linux/macOS:
+
+```bash
 source venv/bin/activate
+```
 
-🔹 Instalar dependências
+### Instalar dependências
+
+```bash
 pip install -r requirements.txt
+```
 
-🔹 Configurar a chave da OpenAI
-Crie um arquivo .env na raiz do projeto ou configure diretamente nas variáveis de ambiente:
+### Configurar variável de ambiente
 
-OPENAI_API_KEY=sua_chave_openai_aqui
+```env
+OPENAI_API_KEY=sua_chave_aqui
+```
 
-🔐 Nunca versionar a chave da API no repositório
+### Executar migrações
 
-🔹 Executar migrações do banco
+```bash
 python manage.py migrate
+```
 
-🔹 Iniciar o servidor
+### Iniciar aplicação
+
+```bash
 python manage.py runserver
+```
 
-A aplicação estará disponível em:
-http://127.0.0.1:8000/
+Acesse:
 
-⚠️ Observações Importantes
+```text
+http://127.0.0.1:8000
+```
 
-* Todos os casos clínicos gerados são hipotéticos
-* A ferramenta não substitui diagnóstico profissional
-* O projeto possui finalidade educacional e acadêmica
-* Não são utilizados dados reais de pacientes
+---
 
-📌 Objetivo do Projeto
+## 🎓 Contexto Acadêmico
 
-O PsicoSimula foi desenvolvido com foco em:
+**Curso:** Engenharia de Software
+
+**Projeto:** Trabalho de Conclusão de Curso (TCC)
+
+**Autor:** Eduardo Tristão Melo
+
+**Tema:** Ferramenta Web para Geração e Apresentação de Casos Clínicos Hipotéticos em Psicopatologia utilizando Inteligência Artificial Generativa
+
+---
+
+## 📌 Objetivos do Projeto
+
 * Apoiar o ensino da psicopatologia
 * Estimular o raciocínio clínico
-* Explorar o uso de IA generativa em contextos educacionais
+* Explorar aplicações práticas de IA Generativa
 * Aplicar conceitos de Engenharia de Software em um projeto real
+* Demonstrar integração entre aplicações web e modelos de IA
 
-📄 Documentação Acadêmica
+---
 
-O texto completo do projeto está disponível no Trabalho de Conclusão de Curso (TCC), que descreve:
+## ⚠️ Aviso
+
+* Todos os casos gerados são fictícios.
+* Não são utilizados dados reais de pacientes.
+* A ferramenta possui finalidade exclusivamente educacional.
+* Não substitui avaliação ou diagnóstico profissional.
+
+---
+
+## 📄 Documentação
+
+O projeto possui documentação acadêmica completa descrevendo:
+
 * Fundamentação teórica
-* Metodologia
-* Desenvolvimento da ferramenta
-* Resultados e discussões
+* Metodologia de desenvolvimento
+* Arquitetura da solução
+* Resultados obtidos
+* Discussões e conclusões
